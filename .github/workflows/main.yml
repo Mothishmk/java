@@ -28,7 +28,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: coitlearning1/springboot-images-new
-        tags: latest
+        tags: docker push mothishmk/java
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}

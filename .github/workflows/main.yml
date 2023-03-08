@@ -23,11 +23,11 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn -B package --file pom.xml
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: java/springboot-images-new
+        image: mothishmk/springboot-images-new
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
